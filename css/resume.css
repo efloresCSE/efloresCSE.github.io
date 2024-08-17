@@ -1,0 +1,74 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  padding-top: 50px;
+  color: #868e96;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+h5 {
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+
+section.resume-section {
+  border-bottom: 1px solid #dee2e6;
+}
+
+@media (min-width: 768px) {
+  section.resume-section {
+    min-height: 100vh;
+  }
+}
+
+.ucsd {
+  max-width: 8.5rem;
+  max-height: 8.5rem;
+  border: 0.5rem solid rgba(255, 255, 255, 0.2);
+}
+
+.projectlink {
+  font-size: 2rem;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 0;
+    padding-left: 16rem;
+  }
+
+  #myNav {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 16rem;
+    text-align: center;
+  }
+
+  #myNav .navbar-brand {
+    display: flex;
+    margin: auto auto 0 auto;
+  }
+
+  #myNav .navbar-collapse .navbar-nav {
+    flex-direction: column;
+  }
+
+  #myNav .navbar-collapse {
+    display: flex;
+    flex-grow: 0;
+    margin-bottom: auto;
+  }
+
+  #myNav .navbar-brand .myface {
+    max-width: 12rem;
+    max-height: 12rem;
+    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+  }
+}
