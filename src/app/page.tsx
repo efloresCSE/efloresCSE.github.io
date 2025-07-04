@@ -292,7 +292,7 @@ function IntroScreen({ onComplete }: { onComplete: () => void }) {
           transition={{ duration: 0.8, delay: 1.6 }}
           className="mb-12"
         >
-          <p className="text-xl md:text-2xl text-blue-200 font-light">Software Engineer & Digital Craftsman</p>
+          <p className="text-xl md:text-2xl text-blue-200 font-light">Software Engineer</p>
         </motion.div>
 
         <motion.div
