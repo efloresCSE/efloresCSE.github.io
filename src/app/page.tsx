@@ -64,7 +64,6 @@ interface Education {
 // Data
 const navigation = [
   { name: "About", id: "about" },
-  { name: "Experience", id: "experience" },
   { name: "Education", id: "education" },
   { name: "Projects", id: "projects" },
   { name: "Certifications", id: "certifications" },
@@ -866,53 +865,6 @@ export default function Portfolio() {
             >
               <Scene3D />
             </Canvas>
-          </div>
-        </section>
-
-        <section id="experience" className="pt-20 md:pt-40 pb-20 px-4 md:px-8">
-          <div className="max-w-4xl mx-auto">
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <SectionHeader>Experience</SectionHeader>
-
-              <Card className="bg-white/5 border-white/10 backdrop-blur-sm mb-6">
-                <CardContent className="p-4 md:p-6">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                    <div>
-                      <h3 className="text-lg md:text-xl font-bold text-white">
-                        Full Stack Software Engineer (Startup)
-                      </h3>
-                      <p className="text-amber-300">Connectado Inc</p>
-                    </div>
-                    <Badge variant="outline" className="border-amber-500/50 text-amber-300 w-fit mt-2 md:mt-0">
-                      Present
-                    </Badge>
-                  </div>
-                  <p className="text-blue-100 leading-relaxed text-sm md:text-base">
-                    Contributed end-to-end as a full-stack engineer—built UI components in React/Next.js, designed and
-                    maintained backend data systems, and supported development across the stack.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white/5 border-white/10 backdrop-blur-sm mb-6">
-                <CardContent className="p-4 md:p-6">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                    <div>
-                      <h3 className="text-lg md:text-xl font-bold text-white">Software Engineer</h3>
-                      <p className="text-amber-300">Ad Astra Media</p>
-                    </div>
-                    <Badge variant="outline" className="border-amber-500/50 text-amber-300 w-fit mt-2 md:mt-0">
-                      Present
-                    </Badge>
-                  </div>
-                  <p className="text-blue-100 leading-relaxed text-sm md:text-base">
-                    Spearheaded front-end and AR development for interactive web and mobile experiences using React,
-                    Next.js, TypeScript, A-Frame and 8th Wall. Partnered with cross-functional teams to align immersive
-                    features with project objectives and user needs.
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
           </div>
         </section>
 
