@@ -64,12 +64,19 @@ interface Education {
 // Data
 const navigation = [
   { name: "About", id: "about" },
+  { name: "Experience", id: "experience" },
   { name: "Education", id: "education" },
   { name: "Projects", id: "projects" },
   { name: "Certifications", id: "certifications" },
 ]
 
 const projects: Project[] = [
+  {
+    title: "The Origins of The Elements",
+    description: "Educational Mobile Game (iOS & Android)",
+    tech: ["React Native", "TypeScript", "iOS", "Android"],
+    link: "https://github.com/efloresCSE/the-origins-of-the-elements",
+  },
   {
     title: "PomoXV",
     description: "Time Management Web Application",
@@ -152,28 +159,34 @@ const education: Education[] = [
 
 const projectPlanets: ProjectPlanet[] = [
   {
-    title: "PomoXV",
-    link: "https://nickkro25.github.io/cse112_team15/",
+    title: "The Origins of the Elements",
+    link: "https://github.com/efloresCSE/the-origins-of-the-elements",
     color: "#3b82f6",
     particleIndex: 0,
   },
   {
+    title: "PomoXV",
+    link: "https://nickkro25.github.io/cse112_team15/",
+    color: "#f59e0b",
+    particleIndex: 4,
+  },
+  {
     title: "TXT2DB",
     link: "https://github.com/efloresCSE/relational_database",
-    color: "#f59e0b",
-    particleIndex: 5,
+    color: "#10b981",
+    particleIndex: 8,
   },
   {
     title: "3D Portfolio Website v2",
     link: "https://eflorescse.github.io/",
     color: "#3b82f6",
-    particleIndex: 10,
+    particleIndex: 12,
   },
   {
     title: "Eco Musica - AR Poster",
     link: "https://github.com/efloresCSE/Eco-Musica-AR-Poster",
     color: "#f59e0b",
-    particleIndex: 15,
+    particleIndex: 16,
   },
   {
     title: "Yelp Review Analysis",
@@ -185,34 +198,40 @@ const projectPlanets: ProjectPlanet[] = [
 
 const mobileProjectPlanets: ProjectPlanet[] = [
   {
+    title: "The Origins of the Elements",
+    link: "https://github.com/efloresCSE/the-origins-of-the-elements",
+    color: "#f59e0b",
+    particleIndex: 0,
+  },
+  {
     title: "PomoXV",
     link: "https://nickkro25.github.io/cse112_team15/",
     color: "#3b82f6",
-    particleIndex: 0,
+    particleIndex: 2,
   },
   {
     title: "TXT2DB",
     link: "https://github.com/efloresCSE/relational_database",
     color: "#f59e0b",
-    particleIndex: 2,
+    particleIndex: 4,
   },
   {
     title: "3D Portfolio Website v2",
     link: "https://eflorescse.github.io/",
     color: "#3b82f6",
-    particleIndex: 4,
+    particleIndex: 6,
   },
   {
     title: "Eco Musica - AR Poster",
     link: "https://github.com/efloresCSE/Eco-Musica-AR-Poster",
     color: "#10b981",
-    particleIndex: 6,
+    particleIndex: 8,
   },
   {
     title: "Yelp Review Analysis",
     link: "https://eflorescse.github.io/data-analysis-project/",
     color: "#8b5cf6",
-    particleIndex: 8,
+    particleIndex: 10,
   },
 ]
 
@@ -291,7 +310,7 @@ function IntroScreen({ onComplete }: { onComplete: () => void }) {
           transition={{ duration: 0.8, delay: 1.6 }}
           className="mb-12"
         >
-          <p className="text-xl md:text-2xl text-blue-200 font-light">Software Engineer</p>
+          <p className="text-xl md:text-2xl text-blue-200 font-light">Software Engineer & Digital Craftsman</p>
         </motion.div>
 
         <motion.div
@@ -424,9 +443,8 @@ function ProjectPlanet({
       {(isMobile || hovered) && (
         <Html center style={{ pointerEvents: "none" }}>
           <div
-            className={`bg-black/90 text-white px-2 py-1 rounded-lg font-medium whitespace-nowrap transform border border-white/20 ${
-              isMobile ? "text-xs -translate-y-6" : "text-sm -translate-y-8"
-            }`}
+            className={`bg-black/90 text-white px-2 py-1 rounded-lg font-medium whitespace-nowrap transform border border-white/20 ${isMobile ? "text-xs -translate-y-6" : "text-sm -translate-y-8"
+              }`}
           >
             <div className={`font-bold ${isMobile ? "text-xs" : ""}`}>{project.title}</div>
             {!isMobile && <div className="text-xs text-gray-300 mt-1">Tap to view project</div>}
@@ -569,7 +587,7 @@ function CentralContent() {
   const isMobile = useIsMobile()
 
   return (
-      <Html center position={[0, 0.6, 0]} style={{ pointerEvents: "none" }}>
+    <Html center position={[0, 0.6, 0]} style={{ pointerEvents: "none" }}>
       <div className="text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -786,9 +804,8 @@ export default function Portfolio() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all cursor-pointer ${
-                    activeSection === item.id ? "bg-amber-500 text-blue-900" : "text-white hover:bg-white/10"
-                  }`}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all cursor-pointer ${activeSection === item.id ? "bg-amber-500 text-blue-900" : "text-white hover:bg-white/10"
+                    }`}
                 >
                   {item.name}
                 </button>
@@ -842,9 +859,8 @@ export default function Portfolio() {
                     <button
                       key={item.id}
                       onClick={() => scrollToSection(item.id)}
-                      className={`text-left py-4 px-4 rounded-lg text-lg font-medium transition-all ${
-                        activeSection === item.id ? "bg-amber-500 text-blue-900" : "text-white hover:bg-white/10"
-                      }`}
+                      className={`text-left py-4 px-4 rounded-lg text-lg font-medium transition-all ${activeSection === item.id ? "bg-amber-500 text-blue-900" : "text-white hover:bg-white/10"
+                        }`}
                     >
                       {item.name}
                     </button>
@@ -865,6 +881,51 @@ export default function Portfolio() {
             >
               <Scene3D />
             </Canvas>
+          </div>
+        </section>
+
+        <section id="experience" className="pt-20 md:pt-40 pb-20 px-4 md:px-8">
+          <div className="max-w-4xl mx-auto">
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+              <SectionHeader>Experience</SectionHeader>
+
+              <Card className="bg-white/5 border-white/10 backdrop-blur-sm mb-6">
+                <CardContent className="p-4 md:p-6">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                    <div>
+                      <h3 className="text-lg md:text-xl font-bold text-white">Software Engineer</h3>
+                      <p className="text-amber-300">Ad Astra Media</p>
+                    </div>
+                    <Badge variant="outline" className="border-amber-500/50 text-amber-300 w-fit mt-2 md:mt-0">
+                      Present
+                    </Badge>
+                  </div>
+                  <p className="text-blue-100 leading-relaxed text-sm md:text-base">
+                    Spearheaded Full-Stack and AR development for interactive web and mobile experiences. Partnered with cross-functional teams to align immersive
+                    features with project objectives and user needs.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white/5 border-white/10 backdrop-blur-sm mb-6">
+                <CardContent className="p-4 md:p-6">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                    <div>
+                      <h3 className="text-lg md:text-xl font-bold text-white">
+                        Full Stack Software Engineer (Startup)
+                      </h3>
+                      <p className="text-amber-300">Connectado Inc</p>
+                    </div>
+                    <Badge variant="outline" className="border-amber-500/50 text-amber-300 w-fit mt-2 md:mt-0">
+                      Present
+                    </Badge>
+                  </div>
+                  <p className="text-blue-100 leading-relaxed text-sm md:text-base">
+                    Contributed end-to-end as a full-stack engineer, designing and building key UI components, maintaining backend data systems, and implementing front-end testing to support the creation of an AI-driven opportunity platform.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
         </section>
 
