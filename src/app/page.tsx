@@ -10,9 +10,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
 import { ExternalLink, Menu, X } from "lucide-react"
-import { ThreeEvent } from '@react-three/fiber'
-
-
+import type { ThreeEvent } from "@react-three/fiber"
 
 // Hook to detect mobile
 function useIsMobile() {
@@ -25,7 +23,6 @@ function useIsMobile() {
 
     checkIsMobile()
     window.addEventListener("resize", checkIsMobile)
-
     return () => window.removeEventListener("resize", checkIsMobile)
   }, [])
 
@@ -355,7 +352,6 @@ function ProjectPlanet({
   const [hovered, setHovered] = useState(false)
   const hoverTimeout = useRef<NodeJS.Timeout | null>(null)
 
-  // Scale down for mobile and make them always highlighted
   const scale = isMobile ? 0.35 : 1
   const isHighlighted = isMobile || hovered
 
@@ -439,7 +435,6 @@ function ProjectPlanet({
         />
       </mesh>
 
-      {/* Always show labels on mobile, only on hover for desktop */}
       {(isMobile || hovered) && (
         <Html center style={{ pointerEvents: "none" }}>
           <div
@@ -529,37 +524,20 @@ function MobileOrbitingParticles() {
 
   return (
     <group ref={particlesRef} rotation={[Math.PI / 6, 0, Math.PI / 8]}>
-      {/* Project Planets */}
       {mobileProjectPlanets.map((project, i) => {
         const angle = (i / planetCount) * Math.PI * 2
-        const pos: [number, number, number] = [
-          Math.cos(angle) * radius,
-          0,
-          Math.sin(angle) * radius,
-        ]
+        const pos: [number, number, number] = [Math.cos(angle) * radius, 0, Math.sin(angle) * radius]
 
-        return (
-          <ProjectPlanet
-            key={`mobile-planet-${project.title}`}
-            position={pos}
-            project={project}
-            isMobile={true}
-          />
-        )
+        return <ProjectPlanet key={`mobile-planet-${project.title}`} position={pos} project={project} isMobile={true} />
       })}
 
-      {/* In-between Particles with blended colors */}
       {mobileProjectPlanets.map((_, i) => {
         const nextIndex = (i + 1) % planetCount
 
         const angle1 = (i / planetCount) * Math.PI * 2
         const angle2 = ((i + 1) / planetCount) * Math.PI * 2
         const midAngle = (angle1 + angle2) / 2
-        const pos: [number, number, number] = [
-          Math.cos(midAngle) * radius,
-          0,
-          Math.sin(midAngle) * radius,
-        ]
+        const pos: [number, number, number] = [Math.cos(midAngle) * radius, 0, Math.sin(midAngle) * radius]
 
         const colorA = new THREE.Color(mobileProjectPlanets[i].color)
         const colorB = new THREE.Color(mobileProjectPlanets[nextIndex].color)
@@ -568,20 +546,13 @@ function MobileOrbitingParticles() {
         return (
           <mesh key={`mid-particle-${i}`} position={pos}>
             <sphereGeometry args={[0.015, 6, 6]} />
-            <meshStandardMaterial
-              color={midColor}
-              emissive={midColor}
-              emissiveIntensity={0.25}
-            />
+            <meshStandardMaterial color={midColor} emissive={midColor} emissiveIntensity={0.25} />
           </mesh>
         )
       })}
     </group>
   )
 }
-
-
-
 
 function CentralContent() {
   const isMobile = useIsMobile()
@@ -715,6 +686,14 @@ export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("about")
   const [manualScrollLock, setManualScrollLock] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isGitHubPages, setIsGitHubPages] = useState(false)
+
+  // Check if accessed via GitHub Pages
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.location.hostname === "eflorescse.github.io") {
+      setIsGitHubPages(true)
+    }
+  }, [])
 
   useEffect(() => {
     const sections = navigation.map((item) => item.id)
@@ -755,7 +734,7 @@ export default function Portfolio() {
   const scrollToSection = (sectionId: string) => {
     setManualScrollLock(true)
     setActiveSection(sectionId)
-    setMobileMenuOpen(false) // Close mobile menu when navigating
+    setMobileMenuOpen(false)
 
     const target = document.getElementById(sectionId)
     if (target) {
@@ -766,6 +745,24 @@ export default function Portfolio() {
     setTimeout(() => {
       setManualScrollLock(false)
     }, 1200)
+  }
+
+  // Block GitHub Pages access
+  if (isGitHubPages) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-amber-900 flex items-center justify-center p-4">
+        <div className="max-w-2xl w-full text-center bg-white/10 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
+          <div className="text-6xl md:text-8xl mb-6 md:mb-8">🚫</div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-blue-400 to-amber-400 bg-clip-text text-transparent">
+            Direct Access Disabled
+          </h1>
+          <p className="text-lg md:text-xl text-blue-100 leading-relaxed mb-3 md:mb-4">
+            This site is not accessible via GitHub Pages.
+          </p>
+          <p className="text-base md:text-lg text-blue-200">Please visit the official domain instead.</p>
+        </div>
+      </div>
+    )
   }
 
   return (
@@ -901,8 +898,8 @@ export default function Portfolio() {
                     </Badge>
                   </div>
                   <p className="text-blue-100 leading-relaxed text-sm md:text-base">
-                    Spearheaded Full-Stack and AR development for interactive web and mobile experiences. Partnered with cross-functional teams to align immersive
-                    features with project objectives and user needs.
+                    Spearheaded Full-Stack and AR development for interactive web and mobile experiences. Partnered with
+                    cross-functional teams to align immersive features with project objectives and user needs.
                   </p>
                 </CardContent>
               </Card>
@@ -921,7 +918,9 @@ export default function Portfolio() {
                     </Badge>
                   </div>
                   <p className="text-blue-100 leading-relaxed text-sm md:text-base">
-                    Contributed end-to-end as a full-stack engineer, designing and building key UI components, maintaining backend data systems, and implementing front-end testing to support the creation of an AI-driven opportunity platform.
+                    Contributed end-to-end as a full-stack engineer, designing and building key UI components,
+                    maintaining backend data systems, and implementing front-end testing to support the creation of an
+                    AI-driven opportunity platform.
                   </p>
                 </CardContent>
               </Card>
