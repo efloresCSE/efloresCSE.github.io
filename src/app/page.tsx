@@ -898,8 +898,8 @@ export default function Portfolio() {
                     </Badge>
                   </div>
                   <p className="text-blue-100 leading-relaxed text-sm md:text-base">
-                    Spearheaded Full-Stack and AR development for interactive web and mobile experiences. Partnered with
-                    cross-functional teams to align immersive features with project objectives and user needs.
+                    Software Engineer for the Games and Interactive Experiences department, developing interactive web, iOS, and Android applications.
+                    Focused on building immersive educational and AR-based experiences through close collaboration with creative and technical teams.
                   </p>
                 </CardContent>
               </Card>
@@ -918,9 +918,7 @@ export default function Portfolio() {
                     </Badge>
                   </div>
                   <p className="text-blue-100 leading-relaxed text-sm md:text-base">
-                    Contributed end-to-end as a full-stack engineer, designing and building key UI components,
-                    maintaining backend data systems, and implementing front-end testing to support the creation of an
-                    AI-driven opportunity platform.
+                    Contributed end-to-end as a full-stack engineer, designing and building key UI components, maintaining backend data systems, and implementing front-end testing to support the creation of an AI-driven opportunity platform.
                   </p>
                 </CardContent>
               </Card>
