@@ -108,25 +108,31 @@ const projects: Project[] = [
 
 const certifications: Certification[] = [
   {
-    title: "Front End Developer",
+    title: "Front-End Developer",
     company: "Meta",
     location: "Menlo Park, CA",
     year: "2025",
   },
   {
-    title: "Back End Developer",
+    title: "Back-End Developer",
     company: "Meta",
     location: "Menlo Park, CA",
     year: "2025",
   },
   {
-    title: "Database Engineer",
+    title: "iOS Developer",
     company: "Meta",
     location: "Menlo Park, CA",
     year: "2025",
   },
   {
     title: "Android Developer",
+    company: "Meta",
+    location: "Menlo Park, CA",
+    year: "2025",
+  },
+  {
+    title: "Database Engineer",
     company: "Meta",
     location: "Menlo Park, CA",
     year: "2025",
