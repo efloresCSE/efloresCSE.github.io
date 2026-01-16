@@ -997,9 +997,6 @@ export default function Portfolio() {
                             <p className="text-amber-300 font-medium">{cert.company}</p>
                             <p className="text-blue-200 text-sm">{cert.location}</p>
                           </div>
-                          <Badge variant="outline" className="border-amber-500/50 text-amber-300 w-fit mt-2 md:mt-0">
-                            {cert.year}
-                          </Badge>
                         </div>
                       </CardContent>
                     </Card>
