@@ -896,7 +896,9 @@ export default function Portfolio() {
                     </Badge>
                   </div>
                   <p className="text-blue-100 leading-relaxed text-sm md:text-base">
-                    Built and shipped web, mobile, WebAR, and AR applications, leading the full software lifecycle from architecture and implementation through QA and release.                </CardContent>
+                    Built and shipped web, mobile, WebAR, and AR applications, leading the full software lifecycle from architecture and implementation through QA and release.
+                  </p>
+                </CardContent>
               </Card>
 
               <Card className="bg-white/5 border-white/10 backdrop-blur-sm mb-6">
@@ -913,7 +915,9 @@ export default function Portfolio() {
                     </Badge>
                   </div>
                   <p className="text-blue-100 leading-relaxed text-sm md:text-base">
-                    Collaborated with an engineering team on Conectado’s AI Backpack platform, contributing to UI development and designing testing infrastructure to support reliable releases.                </CardContent>
+                    Collaborated with an engineering team on Conectado’s AI Backpack platform, contributing to UI development and designing testing infrastructure to support reliable releases.
+                  </p>
+                </CardContent>
               </Card>
             </motion.div>
           </div>
