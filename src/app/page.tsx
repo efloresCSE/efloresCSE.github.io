@@ -48,7 +48,6 @@ interface Certification {
   title: string
   company: string
   location: string
-  year: string
 }
 
 interface Education {
@@ -70,9 +69,9 @@ const navigation = [
 const projects: Project[] = [
   {
     title: "The Origins of The Elements",
-    description: "Educational Mobile Game (iOS & Android)",
+    description: "Educational Mobile App (iOS & Android)",
     tech: ["React Native", "TypeScript", "iOS", "Android"],
-    link: "https://github.com/efloresCSE/the-origins-of-the-elements",
+    link: "https://apps.apple.com/us/app/origins-of-the-elements/id6751163349",
   },
   {
     title: "PomoXV",
@@ -81,28 +80,28 @@ const projects: Project[] = [
     link: "https://nickkro25.github.io/cse112_team15/",
   },
   {
-    title: "TXT2DB",
-    description: "Custom Built Relational Database with SQL Functionality",
-    tech: ["C++", "SQL", "QT", "Github"],
-    link: "https://github.com/efloresCSE/relational_database",
+    title: "DSDB",
+    description: "Custom Built Relational Database with SQL-like Functionality",
+    tech: ["C++", "SQL", "Data Structures", "Algorithms", "Github"],
+    link: "https://edgar-flores.com/DSDB",
   },
   {
-    title: "3D Portfolio Website v2",
+    title: "edgar-flores.com",
     description: "Personal Website built with Modern Frontend and 3D Technologies",
-    tech: ["React", "Next.js", "Three.js", "TypeScript", "Tailwind CSS"],
-    link: "https://eflorescse.github.io/",
+    tech: ["React", "Next.js", "Three.js", "TypeScript"],
+    link: "https://edgar-flores.com/",
   },
   {
-    title: "Eco Musica - AR Poster",
-    description: "Immersive Augmented Reality Experience",
+    title: "Eco Musica Comes to Life!",
+    description: "Immersive Web Augmented Reality Experience",
     tech: ["A-Frame", "JavaScript", "HTML", "CSS", "8th Wall"],
-    link: "https://github.com/efloresCSE/Eco-Musica-AR-Poster",
+    link: "https://youtu.be/BnMVBnH36cc",
   },
   {
     title: "Public Perception and Crime: Yelp Review Analysis of San Diego Parks",
     description: "Data Analysis and Visualization Project",
     tech: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Github"],
-    link: "https://eflorescse.github.io/data-analysis-project/",
+    link: "https://edgar-flores.com/data-analysis-project/",
   },
 ]
 
@@ -111,43 +110,36 @@ const certifications: Certification[] = [
     title: "Front-End Developer",
     company: "Meta",
     location: "Menlo Park, CA",
-    year: "2025",
   },
   {
     title: "Back-End Developer",
     company: "Meta",
     location: "Menlo Park, CA",
-    year: "2025",
   },
   {
     title: "iOS Developer",
     company: "Meta",
     location: "Menlo Park, CA",
-    year: "2025",
   },
   {
     title: "Android Developer",
     company: "Meta",
     location: "Menlo Park, CA",
-    year: "2025",
   },
   {
     title: "Database Engineer",
     company: "Meta",
     location: "Menlo Park, CA",
-    year: "2025",
   },
   {
     title: "Certified Solutions Architect - Associate",
     company: "AWS",
     location: "Seattle, WA",
-    year: "2024",
   },
   {
     title: "Certified Cloud Practitioner",
     company: "AWS",
     location: "Seattle, WA",
-    year: "2023",
   },
 ]
 
@@ -163,7 +155,7 @@ const education: Education[] = [
 const projectPlanets: ProjectPlanet[] = [
   {
     title: "The Origins of the Elements",
-    link: "https://github.com/efloresCSE/the-origins-of-the-elements",
+    link: "https://apps.apple.com/us/app/origins-of-the-elements/id6751163349",
     color: "#3b82f6",
     particleIndex: 0,
   },
@@ -174,26 +166,26 @@ const projectPlanets: ProjectPlanet[] = [
     particleIndex: 4,
   },
   {
-    title: "TXT2DB",
-    link: "https://github.com/efloresCSE/relational_database",
+    title: "DSDB",
+    link: "https://edgar-flores.com/DSDB",
     color: "#10b981",
     particleIndex: 8,
   },
   {
     title: "3D Portfolio Website v2",
-    link: "https://eflorescse.github.io/",
+    link: "https://edgar-flores.com/",
     color: "#3b82f6",
     particleIndex: 12,
   },
   {
-    title: "Eco Musica - AR Poster",
-    link: "https://github.com/efloresCSE/Eco-Musica-AR-Poster",
+    title: "Eco Musica Comes to Life!",
+    link: "https://youtu.be/BnMVBnH36cc",
     color: "#f59e0b",
     particleIndex: 16,
   },
   {
     title: "Yelp Review Analysis",
-    link: "https://eflorescse.github.io/data-analysis-project/",
+    link: "https://edgar-flores.com/data-analysis-project/",
     color: "#10b981",
     particleIndex: 20,
   },
@@ -202,7 +194,7 @@ const projectPlanets: ProjectPlanet[] = [
 const mobileProjectPlanets: ProjectPlanet[] = [
   {
     title: "The Origins of the Elements",
-    link: "https://github.com/efloresCSE/the-origins-of-the-elements",
+    link: "https://apps.apple.com/us/app/origins-of-the-elements/id6751163349",
     color: "#f59e0b",
     particleIndex: 0,
   },
@@ -213,26 +205,26 @@ const mobileProjectPlanets: ProjectPlanet[] = [
     particleIndex: 2,
   },
   {
-    title: "TXT2DB",
-    link: "https://github.com/efloresCSE/relational_database",
+    title: "DSDB",
+    link: "https://edgar-flores.com/DSDB",
     color: "#f59e0b",
     particleIndex: 4,
   },
   {
     title: "3D Portfolio Website v2",
-    link: "https://eflorescse.github.io/",
+    link: "https://edgar-flores.com/",
     color: "#3b82f6",
     particleIndex: 6,
   },
   {
-    title: "Eco Musica - AR Poster",
-    link: "https://github.com/efloresCSE/Eco-Musica-AR-Poster",
+    title: "Eco Musica Comes to Life!",
+    link: "https://youtu.be/BnMVBnH36cc",
     color: "#10b981",
     particleIndex: 8,
   },
   {
     title: "Yelp Review Analysis",
-    link: "https://eflorescse.github.io/data-analysis-project/",
+    link: "https://edgar-flores.com/data-analysis-project/",
     color: "#8b5cf6",
     particleIndex: 10,
   },
@@ -313,7 +305,7 @@ function IntroScreen({ onComplete }: { onComplete: () => void }) {
           transition={{ duration: 0.8, delay: 1.6 }}
           className="mb-12"
         >
-          <p className="text-xl md:text-2xl text-blue-200 font-light">Software Engineer & Digital Craftsman</p>
+          <p className="text-xl md:text-2xl text-blue-200 font-light">Software Engineer</p>
         </motion.div>
 
         <motion.div
@@ -610,7 +602,7 @@ function CentralContent() {
           transition={{ duration: 0.8, delay: 1.4 }}
           className="text-sm md:text-lg text-blue-100 font-light max-w-xs md:max-w-2xl leading-relaxed mb-4 md:mb-6 pointer-events-none px-4"
         >
-          Turning ideas into reliable software, from backend logic to intuitive interfaces.
+          Software Engineer with 1+ year of professional experience building and shipping user‑facing mobile and web products end‑to‑end.
         </motion.div>
 
         <motion.div
@@ -900,12 +892,11 @@ export default function Portfolio() {
                       <p className="text-amber-300">Ad Astra Media</p>
                     </div>
                     <Badge variant="outline" className="border-amber-500/50 text-amber-300 w-fit mt-2 md:mt-0">
-                      Present
+                      January 2025 - Present
                     </Badge>
                   </div>
                   <p className="text-blue-100 leading-relaxed text-sm md:text-base">
-                    Software Engineer for the Games and Interactive Experiences department, developing interactive web, iOS, and Android applications.
-                    Focused on building immersive educational and AR-based experiences through close collaboration with creative and technical teams.
+                    Built and shipped interactive mobile and WebAR experiences, delivering production features end-to-end from implementation through QA and release. Collaborated closely with creative and technical teams to integrate real-time tracking, animation, and audio/video interactions into polished user-facing experiences.
                   </p>
                 </CardContent>
               </Card>
@@ -915,17 +906,16 @@ export default function Portfolio() {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div>
                       <h3 className="text-lg md:text-xl font-bold text-white">
-                        Full Stack Software Engineer (Startup)
+                        Software Engineer Intern
                       </h3>
                       <p className="text-amber-300">Connectado Inc</p>
                     </div>
                     <Badge variant="outline" className="border-amber-500/50 text-amber-300 w-fit mt-2 md:mt-0">
-                      Present
+                      April 2025 - August 2025
                     </Badge>
                   </div>
                   <p className="text-blue-100 leading-relaxed text-sm md:text-base">
-                    Contributed end-to-end as a full-stack engineer, designing and building key UI components, maintaining backend data systems, and implementing front-end testing to support the creation of an AI-driven opportunity platform.
-                  </p>
+                    Contributed end-to-end to an AI-driven opportunity platform, building and hardening user-facing features from implementation through testing and release readiness. Collaborated with engineering and product teams to improve reliability and maintainability through automated testing and CI practices.                  </p>
                 </CardContent>
               </Card>
             </motion.div>
