@@ -896,9 +896,7 @@ export default function Portfolio() {
                     </Badge>
                   </div>
                   <p className="text-blue-100 leading-relaxed text-sm md:text-base">
-                    Built and shipped interactive mobile and WebAR experiences, delivering production features end-to-end from implementation through QA and release. Collaborated closely with creative and technical teams to integrate real-time tracking, animation, and audio/video interactions into polished user-facing experiences.
-                  </p>
-                </CardContent>
+                    Built and shipped web, mobile, WebAR, and AR applications, leading the full software lifecycle from architecture and implementation through QA and release.                </CardContent>
               </Card>
 
               <Card className="bg-white/5 border-white/10 backdrop-blur-sm mb-6">
@@ -915,8 +913,7 @@ export default function Portfolio() {
                     </Badge>
                   </div>
                   <p className="text-blue-100 leading-relaxed text-sm md:text-base">
-                    Contributed end-to-end to an AI-driven opportunity platform, building and hardening user-facing features from implementation through testing and release readiness. Collaborated with engineering and product teams to improve reliability and maintainability through automated testing and CI practices.                  </p>
-                </CardContent>
+                    Collaborated with an engineering team on Conectado’s AI Backpack platform, contributing to UI development and designing testing infrastructure to support reliable releases.                </CardContent>
               </Card>
             </motion.div>
           </div>
